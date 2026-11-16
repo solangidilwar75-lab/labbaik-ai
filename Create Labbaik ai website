@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LABBAIK AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#07152f;color:white;font-family:Arial,sans-serif}
+header{padding:22px;background:#102957;text-align:center;border-bottom:2px solid #d9ad36}
+header h1{margin:0;color:#f6c94c}
+header p{margin:7px 0 0;color:#dce6ff}
+main{max-width:600px;margin:auto;padding:18px}
+.welcome{text-align:center;padding:25px 10px}
+.robot{font-size:55px}
+h2{color:#f6c94c}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.service{background:#142e5a;padding:18px 8px;border-radius:14px;text-align:center}
+.service span{font-size:27px}
+.chat{margin-top:22px;background:#102957;border-radius:16px;padding:15px}
+#messages{height:220px;overflow:auto}
+.msg{padding:11px;margin:9px 0;border-radius:12px;background:#234477}
+.user{background:#075caa;text-align:right}
+input{width:75%;padding:13px;border:0;border-radius:10px}
+button{padding:13px;background:#f6c94c;border:0;border-radius:10px;font-weight:bold}
+footer{text-align:center;padding:25px;color:#bdc9df}
+</style>
+</head>
+<body>
+<header>
+<h1>LABBAIK AI</h1>
+<p>Your Business. Your AI. Your Future.</p>
+</header>
+<main>
+<div class="welcome">
+<div class="robot">🤖</div>
+<h2>Assalamualaikum!</h2>
+<p>Welcome to LABBAIK AI</p>
+<p>Your Smart Multilingual Assistant</p>
+</div>
+<h2>Our Services</h2>
+<div class="services">
+<div class="service"><span>💬</span><p>AI Chat</p></div>
+<div class="service"><span>📱</span><p>WhatsApp Bot</p></div>
+<div class="service"><span>✈️</span><p>Flight Booking</p></div>
+<div class="service"><span>🏨</span><p>Hotel Booking</p></div>
+<div class="service"><span>🕋</span><p>Umrah Services</p></div>
+<div class="service"><span>🌐</span><p>Website Chatbot</p></div>
+</div>
+<div class="chat">
+<h2>Chat with LABBAIK AI</h2>
+<div id="messages">
+<div class="msg">Assalamualaikum! How can I help you?</div>
+</div>
+<input id="question" placeholder="Type your message...">
+<button onclick="send()">Send</button>
+</div>
+</main>
+<footer>© 2026 LABBAIK AI | All Rights Reserved</footer>
+<script>
+function send(){
+let input=document.getElementById('question');
+let value=input.value.trim();
+if(!value)return;
+let box=document.getElementById('messages');
+box.innerHTML+='<div class="msg user"></div>';
+box.lastElementChild.textContent=value;
+box.innerHTML+='<div class="msg">Thank you for contacting LABBAIK AI! Our AI service is being prepared.</div>';
+input.value='';
+box.scrollTop=box.scrollHeight;
+}
+</script>
+</body>
+</html>
